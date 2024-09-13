@@ -1,16 +1,24 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const projectCards = document.querySelectorAll('.project-card');
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
+document.querySelectorAll('.tab-link').forEach(tabLink => {
+    tabLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        const tabId = this.getAttribute('data-tab');
 
-    themeToggle.addEventListener('click', function() {
-        body.classList.toggle('dark-mode');
-        body.classList.toggle('light-mode');
-        
-        if (body.classList.contains('dark-mode')) {
-            themeToggle.textContent = 'Light Mode';
-        } else {
-            themeToggle.textContent = 'Dark Mode';
-        }
+        document.querySelectorAll('.tab-content').forEach(tabContent => {
+            tabContent.style.display = 'none';
+        });
+
+        document.getElementById(tabId).style.display = 'block';
     });
+});
+
+const themeToggleBtn = document.getElementById('theme-toggle');
+const body = document.body;
+
+themeToggleBtn.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    if (body.classList.contains('dark-mode')) {
+        themeToggleBtn.textContent = 'Switch to Light Mode';
+    } else {
+        themeToggleBtn.textContent = 'Switch to Dark Mode';
+    }
 });
