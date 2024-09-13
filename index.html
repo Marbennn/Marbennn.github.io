@@ -3,42 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Portfolio</title>
-
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-
-        <img class="profile-img" src="IMG NO1.jpg" alt="Profile Image">
-        <h1>My Portfolio</h1>
+        <div class="container">
+            <h1>Marvin Recepcion</h1>
+            <p>IT Student | Web Developer | Graphic Designer</p>
+            <button id="theme-toggle" class="custom-button">Switch to Dark Mode</button>
+        </div>
     </header>
 
-    <div class="container">
-        <section class="intro">
-            <p>Hello! I am Marvin Recepcion and I am a 2nd year student of Upang with a course of BSIT section Block 1 .</p>
-        </section>
+    <nav>
+        <ul>
+            <li><a href="#" class="tab-link custom-button" data-tab="about">About</a></li>
+            <li><a href="#" class="tab-link custom-button" data-tab="projects">Projects</a></li>
+            <li><a href="#" class="tab-link custom-button" data-tab="skills">Skills</a></li>
+            <li><a href="#" class="tab-link custom-button" data-tab="contact">Contact</a></li>
+        </ul>
+    </nav>
 
-        <section class="projects">
-            <div class="project-card">
-                <h3>Project 1</h3>
-                <p>Description of Project 1.</p>
+    <div class="tab-content" id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-section">
+                <img src="IMG NO1.jpg" class="profile-pic">
+                <p>Hello! I am Marvin Recepcion, A 2nd Year student form PHINMA UPang with a course of BSIT section Block 1.</p>
             </div>
-            <div class="project-card">
-                <h3>Project 2</h3>
-                <p>Description of Project 2.</p>
+        </div>
+    </div>
+
+    <div class="tab-content" id="projects" style="display: none;">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Zomville</h3>
+                <p>A zombie cartoon free to play game.</p>
+                <a href="#" class="custom-button">View Project</a>
             </div>
-            <div class="project-card">
-                <h3>Project 3</h3>
-                <p>Description of Project 3.</p>
+            <div class="project">
+                <h3>Upang Registrar System</h3>
+                <p>A system that helps you to get some requirements through online</p>
+                <a href="#" class="custom-button">View Project</a>
             </div>
-        </section>
+        </div>
+    </div>
+
+    <div class="tab-content" id="skills" style="display: none;">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul>
+                <li>Web Development: HTML, CSS, JavaScript</li>
+                <li>Programming Languages: Python, Java, Kotlin</li>
+                <li>Version Control: Git, GitHub, GitLab</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="tab-content" id="contact" style="display: none;">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>If you like to keep in touch, just contact me in the following</p>
+            <ul>
+                <li>Email: maar.recepcion.up@phinmaed.com</li>
+                <li>LinkedIn: <a href="#">https://www.linkedin.com/in/marvin-recepcion</a></li>
+                <li>GitHub: <a href="#">https://github.com/Marbennn</a></li>
+            </ul>
+        </div>
     </div>
 
     <footer>
-        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 Your Name - All Rights Reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
