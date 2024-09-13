@@ -17,8 +17,8 @@ const body = document.body;
 themeToggleBtn.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
     if (body.classList.contains('dark-mode')) {
-        themeToggleBtn.textContent = 'Switch to Light Mode';
+        themeToggleBtn.textContent = 'Dark Mode';
     } else {
-        themeToggleBtn.textContent = 'Switch to Dark Mode';
+        themeToggleBtn.textContent = 'Light Mode';
     }
 });
